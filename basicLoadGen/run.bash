@@ -1,4 +1,5 @@
-JAVA_HOME='/java/Linux_x86_64_64bit/latest'
+# get javaDir
+source ${HOME}/env/current.cfg
 
 cd `dirname $0`
 
@@ -7,7 +8,7 @@ threadsPerCpu=$2
 load=$3
 durationSec=$4
 
-${JAVA_HOME}/bin/java \
+${javaDir}/bin/java \
   -classpath "classes:lib/*" \
   LoadGen \
   -cpuNum ${cpuNum} \
